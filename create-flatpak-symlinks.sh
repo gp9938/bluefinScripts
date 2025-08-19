@@ -7,6 +7,11 @@ usage() {
     cat >&2 <<-EOF
    usage: $0 [target_dir]
 
+   Utility to create a shortname symlink for every flatpak app in exports/bin
+   into a local directory you can add to your PATH.   The shortname is just the last part
+   of the reverse DNS entry for a program downcased.  For example the flatpak installation
+   for Chrome is "com.google.Chrome".   The symlink will therefore be named "chrome"
+
           target_dir -- where to create the symlinks back to the flatpak exports dir
 
 EOF
